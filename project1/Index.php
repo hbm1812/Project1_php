@@ -32,11 +32,11 @@ if (isset($_SESSION['message'])) {
 
 <body>
   <div class="container">
-    <?php if (isset($_SESSION['message'])) { ?>
+    <?php if (isset($_SESSION['message_login'])) { ?>
       <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <p>
-          <?php echo ($_SESSION['message']);
-          //  unset($_SESSION['message']) 
+          <?php echo ($_SESSION['message_login']);
+            unset($_SESSION['message_login']) 
           ?>
         </p>
 

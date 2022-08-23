@@ -43,12 +43,13 @@ if (isset($_POST['submit'])) {
       'email' => $_SESSION['dataEmail']
       // 'password'=>$_POST['password']
     ];
-
-    Auth::update($dataUpdate);
+    $userCreate = Auth::update($dataUpdate);
     if (isset($_SESSION['message_update'])) {
+      unset($_SESSION['dataUser']);
+      $_SESSION['dataUser'] = $_POST['username'];
       header("location:./Index.php");
-    }
-    else{
+      
+    } else {
       echo '<script>alert("Cập nhật thông tin thất bại")</script>';
     }
   }
@@ -169,11 +170,15 @@ if (isset($_POST['submit'])) {
 
                 <!-- Checkbox -->
                 <div class="form-check d-flex justify-content-center mb-4">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" name="cb" />
                   <label class="form-check-label" for="form2Example33">
                     Minh đẹp trai!
                   </label>
                 </div>
+                <div class="text-danger">
+                  <span><?php echo (isset($err['cb'])) ? $err['cb'] : "" ?></span>
+                </div>
+                <br>
 
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-block mb-4" style="width: 100%;" name="submit">

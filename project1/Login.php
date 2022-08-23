@@ -43,6 +43,10 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/slick-1.8.1/slick/slick.scss">
 </head>
 
 <body>
@@ -52,8 +56,11 @@ if (isset($_POST['submit'])) {
                 <div class="col col-xl-10">
                     <div class="card" style="border-radius: 1rem;">
                         <div class="row g-0">
-                            <div class="col-md-6 col-lg-5 d-none d-md-block">
+                            <div class="col-md-6 col-lg-5 d-none d-md-block img_slick">
                                 <img src="./img/Rikka_img03.jpg" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                                <img src="./img/Rikka_img05.jpg" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                                <img src="./img/Rikka_img06.jpg" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                                <img src="./img/Rikka_img08.jpg" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
                                 <!--làm thêm js slide slick-->
                             </div>
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -106,5 +113,8 @@ if (isset($_POST['submit'])) {
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./slick/slick.min.js"></script>
+<script src="./js/login.js"></script>
 </html>

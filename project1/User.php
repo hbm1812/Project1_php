@@ -42,13 +42,14 @@ class Auth
             $checkPass = password_verify($_POST['password'], $user['password']);
             if ($checkPass == true) {
                 $_SESSION['message'] = "Login success";
+                $_SESSION['message_login'] = "Login success";
                 $_SESSION['dataUser'] = $user['username'];
                 $_SESSION['dataEmail'] = $user['email'];
                 header("location:./Index.php");
             }
-            echo "sai email hoặc mật khẩu!";
+            echo '<script>alert("Sai email hoặc mật khẩu!")</script>';
         } else {
-            echo "email không tồn tại!";
+            echo '<script>alert("Email không tồn tại!")</script>';
         }
     }
 
